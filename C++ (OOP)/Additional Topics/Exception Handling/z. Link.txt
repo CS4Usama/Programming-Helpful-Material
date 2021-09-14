@@ -1,0 +1,5 @@
+https://www.geeksforgeeks.org/exception-handling-c/
+
+https://www.tutorialspoint.com/cplusplus/cpp_exceptions_handling.htm
+
+https://www.computerhope.com/jargon/e/exception-handling.htm

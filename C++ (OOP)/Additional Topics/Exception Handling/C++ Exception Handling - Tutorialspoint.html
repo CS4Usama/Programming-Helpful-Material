@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>C++ Exception Handling - Tutorialspoint</title>
+<meta charset="utf-8">
+<meta name="description" content="C++ Exception Handling - An exception is a problem that arises during the execution of a program. A C++ exception is a response to an exceptional circumstance that arises while a progra"/>
+<meta name="keywords" content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Tutorials, Articles, Programming, training, learning, quiz, preferences, examples, code"/>
+<link rel="canonical" href="https://www.tutorialspoint.com/cplusplus/cpp_exceptions_handling.htm" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<link rel="stylesheet" href="/themes/css/style-min-v1.css?v=2.0.94">
+<script src="/themes/js/script-min-v1.js?v=2.0.0"></script>
+<script>function printPage() { window.print(); }</script>
+
+<script type="text/javascript" src="//services.bilsyndication.com/adv1/?q=0a8a90220201327770f6c986bea026a3" defer="" async=""></script>
+<script>
+var vitag = vitag || {};
+vitag.outStreamConfig = { enablePC:false, enableMobile:false};
+vitag.smartBannerConfig = { enablePC: false, enableMobile: true, disableHorizontalPosition: "right left middle", disableVerticalPosition: "top middle" };
+</script>
+
+<script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/18107/adRecover.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
+<style>
+.right-menu .mui-btn {
+    background-color:#004481;
+}
+a.demo {
+    background:#004481;
+}
+li.heading {
+    background:#004481;
+}
+.course-box{background:#004481}
+.home-intro-sub p{color:#004481}
+</style>
+</head>
+<body>
+<header id="header">
+<!-- Top sub-menu Starts Here -->
+<div class="mui-appbar mui-container-fulid top-menu">
+<div class="mui-container">
+<div class="top-menu-item home">
+<a href="https://www.tutorialspoint.com/index.htm" target="_blank" title="TutorialsPoint - Home"><i class="fal fa-home"></i> <span>Home</span></a>
+</div>
+<div class="top-menu-item qa">
+<a href="https://www.tutorialspoint.com/about/about_careers.htm" target="_blank" title="Job @ Tutorials Point"><i class="fa fa-suitcase"></i> <span>Jobs</span></a>
+</div>
+<div class="top-menu-item tools">
+<a href="https://www.tutorialspoint.com/online_dev_tools.htm" target="_blank" title="Tools - Online Development and Testing Tools"><i class="fal fa-cogs"></i> <span>Tools</span></a>
+</div>
+<div class="top-menu-item coding-ground">
+<a href="https://www.tutorialspoint.com/codingground.htm" target="_blank" title="Coding Ground - Free Online IDE and Terminal"><i class="fal fa-code"></i> <span>Coding Ground </span></a> 
+</div>
+<div class="top-menu-item current-affairs">
+<a href="https://www.tutorialspoint.com/current_affairs.htm" target="_blank" title="Daily Current Affairs"><i class="fal fa-layer-plus"></i> <span>Current Affairs</span></a>
+</div>
+<div class="top-menu-item upsc-notes">
+<a href="https://www.tutorialspoint.com/upsc_ias_exams.htm" target="_blank" title="UPSC IAS Exams Notes - TutorialsPoint"><i class="fal fa-user-tie"></i> <span>UPSC Notes</span></a>
+</div>      
+<div class="top-menu-item online-tutoris">
+<a href="https://www.tutorialspoint.com/tutor_connect/index.php" target="_blank" title="Top Online Tutors - Tutor Connect"><i class="fal fa-user"></i> <span>Online Tutors</span></a>
+</div>
+<div class="top-menu-item whiteboard">
+<a href="https://www.tutorialspoint.com/whiteboard.htm" target="_blank" title="Free Online Whiteboard"><i class="fal fa-chalkboard"></i> <span>Whiteboard</span></a>
+</div>
+<div class="top-menu-item net-meeting">
+<a href="https://www.tutorialspoint.com/netmeeting.php" target="_blank" title="A free tool for online video conferencing"><i class="fal fa-chalkboard-teacher"></i> <span>Net Meeting</span></a> 
+</div>
+<div class="top-menu-item articles">
+<a href="https://www.tutorix.com" target="_blank" title="Tutorx - The Best Learning App" rel="nofollow"><i class="fal fa-video"></i> <span>Tutorix</span></a> 
+</div>        
+<div class="social-menu-item">
+<a href="https://www.facebook.com/tutorialspointindia" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Facebook"><i class="fab fa-facebook-f"></i></a> 
+<a href="https://www.twitter.com/tutorialspoint" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Twitter"><i class="fab fa-twitter"></i></a>
+<a href="https://www.linkedin.com/company/tutorialspoint" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Linkedin"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://www.youtube.com/channel/UCVLbzhxVTiTLiVKeGV7WEBg" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint YouTube"><i class="fab fa-youtube"></i></a>
+</div>        
+</div>
+</div>
+<!-- Top sub-menu Ends Here -->
+<!-- Top main-menu Starts Here -->
+<div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+<div class="mui-container">
+<div class="left-menu">
+<a href="https://www.tutorialspoint.com/index.htm" title="Tutorialspoint">
+<img class="tp-logo" alt="tutorialspoint" src="/cplusplus/images/logo.png">
+</a>
+<div class="mui-dropdown">
+<a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown"><i class="fa fa-th-large"></i> 
+<span>Categories <span class="mui-caret"></span></span></a>            
+<ul class="mui-dropdown__menu cat-menu">
+<li>
+<ul>
+<li><a href="/academic_tutorials.htm"><i class="fa fa-caret-right"></i> Academic Tutorials</a></li>
+<li><a href="/big_data_tutorials.htm"><i class="fa fa-caret-right"></i> Big Data &amp; Analytics </a></li>
+<li><a href="/computer_programming_tutorials.htm"><i class="fa fa-caret-right"></i> Computer Programming </a></li>
+<li><a href="/computer_science_tutorials.htm"><i class="fa fa-caret-right"></i> Computer Science </a></li>
+<li><a href="/database_tutorials.htm"><i class="fa fa-caret-right"></i> Databases </a></li>
+<li><a href="/devops_tutorials.htm"><i class="fa fa-caret-right"></i> DevOps </a></li>
+<li><a href="/digital_marketing_tutorials.htm"><i class="fa fa-caret-right"></i> Digital Marketing </a></li>
+<li><a href="/engineering_tutorials.htm"><i class="fa fa-caret-right"></i> Engineering Tutorials </a></li>
+<li><a href="/upsc_ias_exams.htm"><i class="fa fa-caret-right"></i> Exams Syllabus </a></li>
+<li><a href="/famous_monuments.htm"><i class="fa fa-caret-right"></i> Famous Monuments </a></li>
+<li><a href="/gate_exams_tutorials.htm"><i class="fa fa-caret-right"></i> GATE Exams Tutorials</a></li>
+<li><a href="/latest_technologies.htm"><i class="fa fa-caret-right"></i> Latest Technologies </a></li>
+<li><a href="/machine_learning_tutorials.htm"><i class="fa fa-caret-right"></i> Machine Learning </a></li>
+<li><a href="/mainframe_tutorials.htm"><i class="fa fa-caret-right"></i> Mainframe Development </a></li>
+<li><a href="/management_tutorials.htm"><i class="fa fa-caret-right"></i> Management Tutorials </a></li>
+<li><a href="/maths_tutorials.htm"><i class="fa fa-caret-right"></i> Mathematics Tutorials</a></li>
+<li><a href="/microsoft_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> Microsoft Technologies </a></li>
+<li><a href="/misc_tutorials.htm"><i class="fa fa-caret-right"></i> Misc tutorials </a></li>
+<li><a href="/mobile_development_tutorials.htm"><i class="fa fa-caret-right"></i> Mobile Development </a></li>
+<li><a href="/java_technology_tutorials.htm"><i class="fa fa-caret-right"></i> Java Technologies </a></li>
+<li><a href="/python_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> Python Technologies </a></li>
+<li><a href="/sap_tutorials.htm"><i class="fa fa-caret-right"></i> SAP Tutorials </a></li>
+<li><a href="/scripting_lnaguage_tutorials.htm"><i class="fa fa-caret-right"></i>Programming Scripts </a></li>
+<li><a href="/selected_reading.htm"><i class="fa fa-caret-right"></i> Selected Reading </a></li>
+<li><a href="/software_quality_tutorials.htm"><i class="fa fa-caret-right"></i> Software Quality </a></li>
+<li><a href="/soft_skill_tutorials.htm"><i class="fa fa-caret-right"></i> Soft Skills </a></li>
+<li><a href="/telecom_tutorials.htm"><i class="fa fa-caret-right"></i> Telecom Tutorials </a></li>
+<li><a href="/upsc_ias_exams.htm"><i class="fa fa-caret-right"></i> UPSC IAS Exams </a></li>
+<li><a href="/web_development_tutorials.htm"><i class="fa fa-caret-right"></i> Web Development </a></li>
+<li><a href="/sports_tutorials.htm"><i class="fa fa-caret-right"></i> Sports Tutorials </a></li>
+<li><a href="/xml_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> XML Technologies </a></li>
+<li><a href="/multi_language_tutorials.htm"><i class="fa fa-caret-right"></i> Multi-Language</a></li>
+<li><a href="/questions_and_answers.htm"><i class="fa fa-caret-right"></i> Interview Questions</a></li>
+</ul>
+</li>
+</ul>
+<div class="clear"></div>
+</div> 
+</div>
+<div class="right-menu">
+<div class="toc-toggle">
+<a href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+</div>
+<div class="mobile-search-btn">
+<a href="https://www.tutorialspoint.com/index.htm"><i class="fal fa-search"></i></a>
+</div>
+<div class="search-box">
+<script async src="https://cse.google.com/cse.js?cx=000263362972888060243:yfed6eu421q"></script>
+<div class='gcse-search'></div>
+</div>
+<div class="menu-btn library-btn">
+<a href="https://www.tutorialspoint.com/tutorialslibrary.htm"><i class="fal fa-cubes"></i> <span>Library</span></a>
+</div>
+<div class="menu-btn videos-btn">
+<a href="https://www.tutorialspoint.com/videotutorials/index.php"><i class="fal fa-video"></i> <span>Videos</span></a> 
+</div>
+<div class="menu-btn videos-btn">
+<a href="https://www.tutorialspoint.com/questions/index.php"><i class="fa fa-location-arrow"></i> <span>Q/A</span></a>
+</div>
+<div class="menu-btn ebooks-btn">
+<a href="https://store.tutorialspoint.com"><i class="fal fa-book"></i> <span>eBooks</span></a>
+</div>
+<div class="mui-dropdown">
+<button class="mui-btn mui-btn--primary mobile-menu" data-mui-toggle="dropdown">
+<span class="mui-caret"></span>
+</button>
+<ul class="mui-dropdown__menu">
+<li><a href="https://www.tutorialspoint.com/tutorialslibrary.htm"><i class="fal fa-cubes"></i> <span>Library</span></a></li>
+<li><a href="https://www.tutorialspoint.com/videotutorials/index.php"><i class="fal fa-video"></i> <span>Videos</span></a></li>
+<li><a href="https://store.tutorialspoint.com"><i class="fal fa-book"></i> <span>eBooks</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Top main-menu Ends Here -->
+</header>
+<div class="mui-container-fluid content">
+<div class="mui-container">
+<!-- Tutorial ToC Starts Here -->
+<div class="mui-col-md-3 tutorial-toc">
+<div class="mini-logo">
+<img src="/cplusplus/images/cpp-mini-logo.jpg" alt="C++ Tutorial" />
+</div>
+<ul class="toc chapters">
+<li class="heading">C++ Basics</li>
+<li><a href="/cplusplus/index.htm">C++ Home</a></li>
+<li><a href="/cplusplus/cpp_overview.htm">C++ Overview</a></li>
+<li><a href="/cplusplus/cpp_environment_setup.htm">C++ Environment Setup</a></li>
+<li><a href="/cplusplus/cpp_basic_syntax.htm">C++ Basic Syntax</a></li>
+<li><a href="/cplusplus/cpp_comments.htm">C++ Comments</a></li>
+<li><a href="/cplusplus/cpp_data_types.htm">C++ Data Types</a></li>
+<li><a href="/cplusplus/cpp_variable_types.htm">C++ Variable Types</a></li>
+<li><a href="/cplusplus/cpp_variable_scope.htm">C++ Variable Scope</a></li>
+<li><a href="/cplusplus/cpp_constants_literals.htm">C++ Constants/Literals</a></li>
+<li><a href="/cplusplus/cpp_modifier_types.htm">C++ Modifier Types</a></li>
+<li><a href="/cplusplus/cpp_storage_classes.htm">C++ Storage Classes</a></li>
+<li><a href="/cplusplus/cpp_operators.htm">C++ Operators</a></li>
+<li><a href="/cplusplus/cpp_loop_types.htm">C++ Loop Types</a></li>
+<li><a href="/cplusplus/cpp_decision_making.htm">C++ Decision Making</a></li>
+<li><a href="/cplusplus/cpp_functions.htm">C++ Functions</a></li>
+<li><a href="/cplusplus/cpp_numbers.htm">C++ Numbers</a></li>
+<li><a href="/cplusplus/cpp_arrays.htm">C++ Arrays</a></li>
+<li><a href="/cplusplus/cpp_strings.htm">C++ Strings</a></li>
+<li><a href="/cplusplus/cpp_pointers.htm">C++ Pointers</a></li>
+<li><a href="/cplusplus/cpp_references.htm">C++ References</a></li>
+<li><a href="/cplusplus/cpp_date_time.htm">C++ Date &amp; Time</a></li>
+<li><a href="/cplusplus/cpp_basic_input_output.htm">C++ Basic Input/Output</a></li>
+<li><a href="/cplusplus/cpp_data_structures.htm">C++ Data Structures</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">C++ Object Oriented</li>
+<li><a href="/cplusplus/cpp_classes_objects.htm">C++ Classes &amp; Objects</a></li>
+<li><a href="/cplusplus/cpp_inheritance.htm">C++ Inheritance</a></li>
+<li><a href="/cplusplus/cpp_overloading.htm">C++ Overloading</a></li>
+<li><a href="/cplusplus/cpp_polymorphism.htm">C++ Polymorphism</a></li>
+<li><a href="/cplusplus/cpp_data_abstraction.htm">C++ Abstraction</a></li>
+<li><a href="/cplusplus/cpp_data_encapsulation.htm">C++ Encapsulation</a></li>
+<li><a href="/cplusplus/cpp_interfaces.htm">C++ Interfaces</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">C++ Advanced</li>
+<li><a href="/cplusplus/cpp_files_streams.htm">C++ Files and Streams</a></li>
+<li><a href="/cplusplus/cpp_exceptions_handling.htm">C++ Exception Handling</a></li>
+<li><a href="/cplusplus/cpp_dynamic_memory.htm">C++ Dynamic Memory</a></li>
+<li><a href="/cplusplus/cpp_namespaces.htm">C++ Namespaces</a></li>
+<li><a href="/cplusplus/cpp_templates.htm">C++ Templates</a></li>
+<li><a href="/cplusplus/cpp_preprocessor.htm">C++ Preprocessor</a></li>
+<li><a href="/cplusplus/cpp_signal_handling.htm">C++ Signal Handling</a></li>
+<li><a href="/cplusplus/cpp_multithreading.htm">C++ Multithreading</a></li>
+<li><a href="/cplusplus/cpp_web_programming.htm">C++ Web Programming</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">C++ Useful Resources</li>
+<li><a href="/cplusplus/cpp_questions_answers.htm">C++ Questions and Answers</a></li>
+<li><a href="/cplusplus/cpp_quick_guide.htm">C++ Quick Guide</a></li>
+<li><a href="/cplusplus/cpp_object_oriented.htm">C++ Object Oriented</a></li>
+<li><a href="/cplusplus/cpp_stl_tutorial.htm">C++ STL Tutorial</a></li>
+<li><a href="/cplusplus/cpp_standard_library.htm">C++ Standard Library</a></li>
+<li><a href="/cplusplus/cpp_useful_resources.htm">C++ Useful Resources</a></li>
+<li><a href="/cplusplus/cpp_discussion.htm">C++ Discussion</a></li>
+</ul>
+<ul class="toc reading">
+<li class="sreading">Selected Reading</li>
+<li><a target="_top" href="/upsc_ias_exams.htm">UPSC IAS Exams Notes</a></li>
+<li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li>
+<li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li>
+<li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li>
+<li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li>
+<li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li>
+<li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li>
+</ul>
+<div id="stickyparent">
+<div style="height:250px;width:300px;" id="sticky-ad">
+<div class="adsbyvli" data-ad-slot="vi_9012177"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9012177")})</script>
+</div>
+</div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+<!-- Tutorial Content Starts Here -->
+<div class="mui-col-md-6 tutorial-content">
+<h1>C++ Exception Handling</h1>
+<hr />
+<div class="top-ad-heading">Advertisements</div>
+<div style="text-align:center" class="google-top-ads">
+<div id="vi_top_ads" style="text-align:center !important;"></div>
+   <script>
+     (function() {
+     var adPos = document.getElementById('vi_top_ads');
+     var ad_id_728 = "vi_9012178";
+     var ad_id_650 = "vi_9014435";
+     var ad_id_300 = "vi_9017967";
+     var width = window.innerWidth;
+     var ad_id = ad_id_728;
+     if( width <= 768 ){
+        ad_id =  ad_id_300;
+     }else if( width <= 1435 ){
+        ad_id =  ad_id_650;
+     }
+     adPos.innerHTML = '<div class="adsbyvli" data-ad-slot="' + ad_id + '"></div>';
+     (vitag.displayInit = window.vitag.displayInit || []).push(function () {
+         viAPItag.display(ad_id);
+     });
+     }())
+   </script>
+</div>
+<br>
+<div class="mui-container-fluid button-borders">
+<div class="pre-btn">
+<a href="/cplusplus/cpp_files_streams.htm"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="/cplusplus/cpp_dynamic_memory.htm">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+<div class="clearer"></div>
+<p>An exception is a problem that arises during the execution of a program. A C++ exception is a response to an exceptional circumstance that arises while a program is running, such as an attempt to divide by zero.</p>
+<p>Exceptions provide a way to transfer control from one part of a program to another. C++ exception handling is built upon three keywords: <b>try, catch,</b> and <b>throw</b>.</p>
+<ul class="list">
+<li><p><b>throw</b> &minus; A program throws an exception when a problem shows up. This is done using a <b>throw</b> keyword.</p></li>
+<li><p><b>catch</b> &minus; A program catches an exception with an exception handler at the place in a program where you want to handle the problem. The <b>catch</b> keyword indicates the catching of an exception.</p></li>
+<li><p><b>try</b> &minus; A <b>try</b> block identifies a block of code for which particular exceptions will be activated. It's followed by one or more catch blocks.</p></li>
+</ul>
+<p>Assuming a block will raise an exception, a method catches an exception using a combination of the <b>try</b> and <b>catch</b> keywords. A try/catch block is placed around the code that might generate an exception. Code within a try/catch block is referred to as protected code, and the syntax for using try/catch as follows &minus;</p>
+<pre class="result notranslate">
+try {
+   // protected code
+} catch( ExceptionName e1 ) {
+   // catch block
+} catch( ExceptionName e2 ) {
+   // catch block
+} catch( ExceptionName eN ) {
+   // catch block
+}
+</pre>
+<p>You can list down multiple <b>catch</b> statements to catch different type of exceptions in case your <b>try</b> block raises more than one exception in different situations.</p>
+<h2>Throwing Exceptions</h2>
+<p>Exceptions can be thrown anywhere within a code block using  <b>throw</b> statement. The operand of the throw statement determines a type for the exception and can be any expression and the type of the result of the expression determines the type of exception thrown.</p>
+<p>Following is an example of throwing an exception when dividing by zero condition occurs &minus;</p>
+<pre class="result notranslate">
+double division(int a, int b) {
+   if( b == 0 ) {
+      throw "Division by zero condition!";
+   }
+   return (a/b);
+}
+</pre>
+<h2>Catching Exceptions</h2>
+<p>The <b>catch</b> block following the <b>try</b> block catches any exception. You can specify what type of exception you want to catch and this is determined by the exception declaration that appears in parentheses following the keyword catch.</p> 
+<pre class="result notranslate">
+try {
+   // protected code
+} catch( ExceptionName e ) {
+  // code to handle ExceptionName exception
+}
+</pre>
+<p>Above code will catch an exception of <b>ExceptionName</b> type. If you want to specify that a catch block should handle any type of exception that is thrown in a try block, you must put an ellipsis, ...,  between the parentheses enclosing the exception declaration as follows &minus;</p>
+<pre class="result notranslate">
+try {
+   // protected code
+} catch(...) {
+  // code to handle any exception
+}
+</pre>
+<p>The following is an example, which throws a division by zero exception and we catch it in catch block.</p>
+<div class="demo-view">
+<a href="http://tpcg.io/Nuo9hc" target="_blank" rel="nofollow" class="demo"><i class="fa-external-link"></i> Live Demo</a>
+</div>
+<pre class="prettyprint notranslate">
+#include &lt;iostream&gt;
+using namespace std;
+
+double division(int a, int b) {
+   if( b == 0 ) {
+      throw "Division by zero condition!";
+   }
+   return (a/b);
+}
+
+int main () {
+   int x = 50;
+   int y = 0;
+   double z = 0;
+ 
+   try {
+      z = division(x, y);
+      cout &lt;&lt; z &lt;&lt; endl;
+   } catch (const char* msg) {
+     cerr &lt;&lt; msg &lt;&lt; endl;
+   }
+
+   return 0;
+}
+</pre>
+<p>Because we are raising an exception of type <b>const char*</b>, so while catching this exception, we have to use const char* in catch block. If we compile and run above code, this would produce the following result &minus;</p>
+<pre class="result notranslate">
+Division by zero condition!
+</pre>
+<h2>C++ Standard Exceptions</h2>
+<p>C++ provides a list of standard exceptions defined in <b>&lt;exception&gt;</b>  which we can use in our programs. These are arranged in a parent-child class hierarchy shown below &minus;</p>
+<img src="/cplusplus/images/cpp_exceptions.jpg" alt="C++ Exceptions Hierarchy" />
+<p>Here is the small description of each exception mentioned in the above hierarchy &minus;</p>
+<table class="table table-bordered">
+<tr>
+<th>Sr.No</th>
+<th style="text-align:center;">Exception &amp; Description</th>
+</tr>
+<tr>
+<td class="ts">1</td>
+<td><p><b>std::exception</b></p>
+<p>An exception and parent class of all the standard C++ exceptions.</p></td>
+</tr>
+<tr>
+<td class="ts">2</td>
+<td><p><b>std::bad_alloc</b></p>
+<p>This can be thrown by <b>new</b>.</p></td>
+</tr>
+<tr>
+<td class="ts">3</td>
+<td><p><b>std::bad_cast</b></p>
+<p>This can be thrown by <b>dynamic_cast</b>.</p></td>
+</tr>
+<tr>
+<td class="ts">4</td>
+<td><p><b>std::bad_exception</b></p>
+<p>This is useful device to handle unexpected exceptions in a C++ program.</p></td>
+</tr>
+<tr>
+<td class="ts">5</td>
+<td><p><b>std::bad_typeid</b></p>
+<p>This can be thrown by <b>typeid</b>.</p></td>
+</tr>
+<tr>
+<td class="ts">6</td>
+<td><p><b>std::logic_error</b></p>
+<p>An exception that theoretically can be detected by reading the code.</p></td>
+</tr>
+<tr>
+<td class="ts">7</td>
+<td><p><b>std::domain_error</b></p>
+<p>This is an exception thrown when a mathematically invalid domain is used.</p></td>
+</tr>
+<tr>
+<td class="ts">8</td>
+<td><p><b>std::invalid_argument</b></p>
+<p>This is thrown due to invalid arguments.</p></td>
+</tr>
+<tr>
+<td class="ts">9</td>
+<td><p><b>std::length_error</b></p>
+<p>This is thrown when a too big std::string is created.</p></td>
+</tr>
+<tr>
+<td class="ts">10</td>
+<td><p><b>std::out_of_range</b></p>
+<p>This can be thrown by the 'at' method, for example a std::vector and std::bitset&lt;&gt;::operator[]().</p></td>
+</tr>
+<tr>
+<td class="ts">11</td>
+<td><p><b>std::runtime_error</b></p>
+<p>An exception that theoretically cannot be detected by reading the code.</p></td>
+</tr>
+<tr>
+<td class="ts">12</td>
+<td><p><b>std::overflow_error</b></p>
+<p>This is thrown if a mathematical overflow occurs.</p></td>
+</tr>
+<tr>
+<td class="ts">13</td>
+<td><p><b>std::range_error</b></p>
+<p>This is occurred when you try to store a value which is out of range.</p></td>
+</tr>
+<tr>
+<td class="ts">14</td>
+<td><p><b>std::underflow_error</b></p>
+<p>This is thrown if a mathematical underflow occurs.</p></td>
+</tr>
+</table>
+<h2>Define New Exceptions</h2>
+<p>You can define your own exceptions by inheriting and overriding <b>exception</b> class functionality. Following is the example, which shows how you can use std::exception class to implement your own exception in standard way &minus;</p>
+<div class="demo-view">
+<a href="http://tpcg.io/FUdUJO" target="_blank" rel="nofollow" class="demo"><i class="fa-external-link"></i> Live Demo</a>
+</div>
+<pre class="prettyprint notranslate">
+#include &lt;iostream&gt;
+#include &lt;exception&gt;
+using namespace std;
+
+struct MyException : public exception {
+   const char * what () const throw () {
+      return "C++ Exception";
+   }
+};
+ 
+int main() {
+   try {
+      throw MyException();
+   } catch(MyException&amp; e) {
+      std::cout &lt;&lt; "MyException caught" &lt;&lt; std::endl;
+      std::cout &lt;&lt; e.what() &lt;&lt; std::endl;
+   } catch(std::exception&amp; e) {
+      //Other errors
+   }
+}
+</pre>
+<p>This would produce the following result &minus;</p>
+<pre class="result notranslate">
+MyException caught
+C++ Exception
+</pre>
+<p>Here, <b>what()</b> is a public method provided by exception class and it has been overridden by all the child exception classes. This returns the cause of an exception.</p>
+<div class="mui-container-fluid button-borders show" id="bottom_navigation">
+<div class="pre-btn">
+<a href="/cplusplus/cpp_files_streams.htm"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+<a class="hide-on-mobile" href="javascript:printPage();"><i class="fa fa-print"></i> Print Page</a>
+</div>
+<div class="nxt-btn">
+<a href="/cplusplus/cpp_dynamic_memory.htm">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+<div class="google-bottom-ads">
+<div>Advertisements</div>
+<div>
+<div id="vi_bottom_ads"></div>
+   <script>
+     (function() {
+     var adPos = document.getElementById('vi_bottom_ads');
+     var mobile_ad_id = "vi_9017967";
+     var desktop_ad_id = "vi_9013190";
+     var ad_id = window.innerWidth <= 768 ? mobile_ad_id : desktop_ad_id;
+     adPos.innerHTML = '<div class="adsbyvli" data-ad-slot="' + ad_id + '"></div>';
+     (vitag.displayInit = window.vitag.displayInit || []).push(function () {
+         viAPItag.display(ad_id);
+     });
+     }())
+   </script>
+</div>
+<div class="space-bottom"></div>
+</div>
+</div>
+<!-- Tutorial Content Ends Here -->
+<!-- Right Column Starts Here -->
+<div class="mui-col-md-2 google-right-ads">
+<div class="space-top"></div>
+<div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;">
+<div class="adsbyvli" data-ad-slot="vi_9017966"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9017966")})</script>
+</div>
+<div class="google-right-ad" style="margin-top:16px;">
+<div class="adsbyvli" data-ad-slot="vi_9017967"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9017967")})</script>
+</div>
+<div class="google-right-ad" style="margin-top:16px;margin-bottom:15px;">
+<div class="adsbyvli" data-ad-slot="vi_9013289"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9013289")})</script>
+</div>
+<div class="space-bottom" style="margin-bottom:15px;"></div>
+</div>
+<!-- Right Column Ends Here -->
+</div>
+</div>
+<div class="clear"></div>
+<footer id="footer">
+<div class="mui--text-center">
+<div class="mui--text-caption mui--text-light">
+<a href="/index.htm" class="logo"><img class="img-responsive" src="/images/logo-black.png" alt="Tutorials Point" title="Tutorials Point"></a>
+</div>
+<ul class="mui-list--inline mui--text-body2 mui--text-light">
+<li><a href="/about/index.htm"><i class="fal fa-globe"></i> About us</a></li>
+<li><a href="/about/about_terms_of_use.htm"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+<li><a href="/about/about_privacy.htm"> <i class="fal fa-shield-check"></i> Privacy Policy</a></li>
+<li><a href="/about/faq.htm"><i class="fal fa-question-circle"></i> FAQ's</a></li>
+<li><a href="/about/about_helping.htm"><i class="fal fa-hands-helping"></i> Helping</a></li>
+<li><a href="/about/contact_us.htm"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+</ul>
+<div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights Reserved.</div>
+</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-232293-17"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-232293-6');
+</script>
+</footer>
+</body>
+</html>
