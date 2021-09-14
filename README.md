@@ -73,7 +73,7 @@ _Different Programming Books and Helpful Materials for Developers_
 
         4. React.js
             » Pure React by Dave Ceddia z-lib.org.pdf
-            » React.js Class Components Lifecycle.PNG
+            » React.js Class Components Lifecycles.PNG
 
         5. Node.js, Express in Action (Writing, Building and Testing Node.js Applications) by Evan M. Hahn.pdf
         6. Firebase & Firebase Storage   (images)
