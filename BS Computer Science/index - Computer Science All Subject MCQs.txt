@@ -1,0 +1,11 @@
+*This Book Includes All CS Related Subject MCQ's:* 
+
+ *Basic C++* MCQ's : Page# 81 to 103
+
+ *Computer Architecture ....Like DLD* MCQ's :   Page# 128 to 146
+
+ *DLD MCQ's* :  Page#  217 to 228
+
+OOP MCQ's :   Page# 259 to 286
+
+ *Automata MCQ's* : Page# 315 to 329
