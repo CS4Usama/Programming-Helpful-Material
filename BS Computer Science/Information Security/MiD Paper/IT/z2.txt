@@ -1,0 +1,25 @@
+A model for much of what we will be discussing is captured, in very general terms, a message is to be transferred from one party to another across some sort of internet. The two parties, who are the principals in this transaction, must cooperate for the exchange to take place. A logical information channel is established by defining a route through the internet from source to destination and by the cooperative use of communication protocols (e.g., TCP/IP) by the two principals.
+
+All the techniques for providing security have two components:
+
+1. A security-related transformation on the information to be sent. Examples include the encryption of the message, which scrambles the message so that it is unreadable by the opponent, and the addition of a code based on the contents of the message, which can be used to verify the identity of the sender.
+
+2. Some secret information shared by the two principals and, it is hoped, unknown to the opponent. An example is an encryption key used in conjunction with the transformation to scramble the
+message before transmission and unscramble it on reception (a form of encryption, known as public-key encryption, in which only one of the two principals needs to have the secret information).
+
+This general model shows that there are four basic tasks in designing a particular security service:
+
+1. Design an algorithm for performing the security-related transformation. The algorithm should be such that an opponent cannot defeat its purpose.
+
+2. Generate the secret information to be used with the algorithm.
+
+3. Develop methods for the distribution and sharing of secret information.
+
+4. Specify a protocol to be used by the two principals that makes use of the security algorithm and the secret information to achieve a particular security service.
+
+NETWORK ACCESS SECURITY MODAL:
+
+Another type of unwanted access is the placement in a computer system of logic that exploits vulnerabilities in the system and that can affect application programs as well as utility programs, such
+as editors and compilers. Programs can present two kinds of threats:
+1. Information Access Threats: intercept or modify data on behalf of users who should not have access to that data.
+2. Service Threats: exploit service flaws in computers to inhibit use by legitimate users.
