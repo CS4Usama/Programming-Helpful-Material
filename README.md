@@ -100,6 +100,12 @@ _Different Programming Books and Helpful Materials for Developers_
 
 
 
+- ### Python
+        1. A Smarter Way to Learn Python by Mark Myers
+        2. Python Crash Course – A Hands-on Project-based Introduction to Programming by Eric Matthes
+
+
+
 - ### Extra Material
         1. HTML & ASCII Codes   (images)
         2. 120 Data Science Interview Questions.pdf
