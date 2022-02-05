@@ -87,6 +87,7 @@ _Different Programming Books and Helpful Materials for Developers_
             » HTML, CSS and JavaScript.pptx
             » A Smarter Way to Learn JavaScript by Mark Myers.pdf
             » JavaScript Cheatsheet 2019 - lenguajejs.com.pdf
+            » Eloquent JavaScript 3rd Edition – A Modern Introduction to Programming by Marijn Haverbeke.pdf
 
         4. React.js
             » Pure React by Dave Ceddia z-lib.org.pdf
