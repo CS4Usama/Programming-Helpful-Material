@@ -13,10 +13,11 @@ _Different Programming Books and Helpful Materials for Developers_
         9. Information Security
         10. Introduction to Computing Applications
         11. Operating Systems
-        12. Software Engineering
-        13. Theory of Automata
-        14. Web Design and Development
-        15. Computer Science All Subject MCQs.pdf & Its Index.txt
+        12. Professional Practices
+        13. Software Engineering
+        14. Theory of Automata
+        15. Web Design and Development
+        16. Computer Science All Subject MCQs.pdf & Its Index.txt
 
 - ### Batch Programming
         1. Basic Commands
