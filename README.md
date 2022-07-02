@@ -71,11 +71,10 @@ _Different Programming Books and Helpful Materials for Developers_
 
 - ### Digital Transformation
         1. Blockchain
-        2. Intro to AI Presentation.pdf
-        3. AI Slides Google Drive Link.txt
-        4. Pasha Salary Survey 2021.pdf
-        5. Jeff Bezos Book (The Bezos Letters) Download Link   (image)
-        6. #others
+        2. Intro to AI Presentation.pdf & Slides Google Drive Link.txt
+        3. Pasha Salary Survey 2021.pdf
+        4. Jeff Bezos Book (The Bezos Letters) Download Link   (image)
+        5. #others
             » Artificial Intelligence Trends for 2022 - 2023.pdf
             » Cryptocurrencies Simply Explained by Dr. Julian Hosp.pdf
             » Digital Transformation Trends Shaping 2022.pdf
