@@ -111,8 +111,10 @@ _Different Programming Books and Helpful Materials for Developers_
 
 - ### Extra Material
         1. HTML & ASCII Codes   (images)
-        2. 120 Data Science Interview Questions.pdf
-        3. Programming Handbook.pdf
-        4. Cyber Security
+        2. 128 Programming Languages   (image)
+        3. DevSecOps   (image)
+        4. 120 Data Science Interview Questions.pdf
+        5. Programming Handbook.pdf
+        6. Cyber Security
             » Kali Linux Commands.txt
             » Pen-Testing Toolkit, Sim Card Points, Linux Directories & Google Dorks   (images)
