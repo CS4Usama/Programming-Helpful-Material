@@ -1,0 +1,67 @@
+What are the Passes of Compiler
+
+A pass refers to the number of times the compiler goes through the source code. There are single-pass compilers and multi-pass compilers. Single-pass compiler goes through the program only once. In other words, the single pass compiler allows the source code to pass through each compilation unit only once. It immediately translates each code section into its final machine code.
+
+Multi-pass compiler goes through the source code several times. In other words, it allows the source code to pass through each compilation unit several times. Each pass takes the result of the previous pass as input and creates intermediate outputs.
+What is pass in a compiler?
+Image result for compiler passes
+A Compiler pass refers to the traversal of a compiler through the entire program. 
+Compiler pass are two types: Single Pass Compiler, and Two Pass Compiler or Multi Pass Compiler.
+===================
+The phases of a compiler are:
+Lexical analysis.
+Syntax analysis.
+Semantic analysis.
+Intermediate code generator.
+Code optimizer.
+Code generator.
+=====================
+Lexical Analysis
+Lexical Analysis is the first phase when compiler scans the source code. 
+This process can be left to right, character by character, and group these characters into tokens.
+Identify the lexical units in a source code
+Classify lexical units into classes like constants, reserved words, and enter them in different tables. It will Ignore comments in the source program
+Identify token which is not a part of the language
+===============
+Token
+A token is a pair consisting of a token name and an optional attribute value. The token name is an abstract symbol representing a kind of lexical unit, 
+e.g., a particular keyword, or sequence of input characters denoting an identifier. The token names are the input symbols that the parser processes.
+=============
+Pattern: 
+A set of strings in the input for which the same token is produced as output. 
+This set of strings is described by a rule called a pattern associated with the token.
+=====================
+Lexeme: 
+A lexeme is a sequence of characters in the source program that is matched by the pattern for a token
+=========================
+Parse Tree-
+
+The process of deriving a string is called as derivation.
+The geometrical representation of a derivation is called as a parse tree or derivation tree.
+Types of Derivation.
+1- Leftmost Derivation
+2- Rightmost Derivation
+========================
+1- Leftmost Derivation
+The process of deriving a string by expanding the leftmost non-terminal at each step is called as leftmost derivation.
+The geometrical representation of leftmost derivation is called as a leftmost derivation tree.
+======================
+2- Rightmost Derivation
+The process of deriving a string by expanding the rightmost non-terminal at each step is called as rightmost derivation.
+The geometrical representation of rightmost derivation is called as a rightmost derivation tree.
+===============
+Syntax Analysis
+Syntax Analysis is a second phase of the compiler design process in which the given input string is checked for the confirmation of rules and structure of the formal grammar. 
+It analyses the syntactical structure and checks if the given input is in the correct syntax of the programming language or not.
+==================
+Abstract syntax Tree
+An abstract syntax tree (AST) is a way of representing the syntax of a programming language as a hierarchical tree-like structure. 
+This structure is used for generating symbol tables for compilers and later code generation. 
+The tree represents all of the constructs in the language and their subsequent rules.
+=====================
+CFG
+Context-free grammars (CFGs) are used to describe context-free languages. 
+A context-free grammar is a set of recursive rules used to generate patterns of strings. ... 
+CFG's are used to describe programming languages and parser programs in compilers can be generated automatically from context-free grammars.
+
+=====================
