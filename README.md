@@ -2,23 +2,24 @@
 _Different Programming Books and Helpful Materials for Developers_
 
 - ### BS Computer Science
-        01. Compiler Construction
-        02. Computer Graphics
-        03. Computer Networks
-        04. Computer Organization and Assembly Language
-        05. Data Structure and Algorithms (DSA)
-        06. Database Systems
-        07. Digital Logic & Computer Design (DLD)
-        08. Discrete Structures
-        09. Fundamentals of Data Mining
-        10. Information Security
-        11. Introduction to Computing Applications
-        12. Operating Systems
-        13. Professional Practices
-        14. Software Engineering
-        15. Theory of Automata
-        16. Web Design and Development
-        17. Computer Science All Subject MCQs.pdf & Its Index.txt
+        01. Artificial Intelligence
+        02. Compiler Construction
+        03. Computer Graphics
+        04. Computer Networks
+        05. Computer Organization and Assembly Language
+        06. Data Structure and Algorithms (DSA)
+        07. Database Systems
+        08. Digital Logic & Computer Design (DLD)
+        09. Discrete Structures
+        10. Fundamentals of Data Mining
+        11. Information Security
+        12. Introduction to Computing Applications
+        13. Operating Systems
+        14. Professional Practices
+        15. Software Engineering
+        16. Theory of Automata
+        17. Web Design and Development
+        18. Computer Science All Subject MCQs.pdf & Its Index.txt
 
 - ### Batch Programming
         1. Basic Commands
