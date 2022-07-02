@@ -2,15 +2,15 @@
 _Different Programming Books and Helpful Materials for Developers_
 
 - ### BS Computer Science
-        1. Compiler Construction
-        2. Computer Graphics
-        3. Computer Networks
-        4. Computer Organization and Assembly Language
-        5. Data Structure and Algorithms (DSA)
-        6. Database Systems
-        7. Digital Logic & Computer Design (DLD)
-        8. Discrete Structures
-        9. Information Security
+        01. Compiler Construction
+        02. Computer Graphics
+        03. Computer Networks
+        04. Computer Organization and Assembly Language
+        05. Data Structure and Algorithms (DSA)
+        06. Database Systems
+        07. Digital Logic & Computer Design (DLD)
+        08. Discrete Structures
+        09. Information Security
         10. Introduction to Computing Applications
         11. Operating Systems
         12. Professional Practices
