@@ -79,10 +79,16 @@ _Different Programming Books and Helpful Materials for Developers_
         4. Jeff Bezos Book (The Bezos Letters) Download Link   (image)
         5. #others
             » Artificial Intelligence Trends for 2022 - 2023.pdf
+            » Building the AI Bank of the Future by McKinsey & Company.pdf
             » Cryptocurrencies Simply Explained by Dr. Julian Hosp.pdf
+            » Digital Cities Index 2022 – Making Digital Work for Cities: A Global Benchmark of Urban Technology.pdf
             » Digital Transformation Trends Shaping 2022.pdf
+            » Fireblocks Tokenization Whitepaper – The Foundation of Digital Financial Markets.pdf
             » Government AI Readiness Index 2021.pdf
+            » Guide to Fraud Analytics in 2022 by SEON Technologies.pdf
             » How Web3 is Shaping the Future of Finance.pdf
+            » MIT Technology Review 2022-07.pdf
+            » The Global Covid-19 Fintech Market – Impact and Industry Resilience Study.pdf
             » The World in 2030 – 10 Predictions for long-term Investors.pdf
             » Top-25 Most Used Linux Commands by Hassan Abd Elrahman.pdf
 
