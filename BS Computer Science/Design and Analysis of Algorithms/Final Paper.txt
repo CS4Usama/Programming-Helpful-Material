@@ -1,0 +1,13 @@
+1. Name three linear data structures and three divide and conquer strategies of data structures.
+2. Recursion function to find the sum of 1 to n numbers.
+3. Algorithm of Search Element in Binary Search Tree.
+4. Insertion sort algorithm and its time complexity.
+5. Find the best and worst time complexity of the following:
+	for(i=0; i<n; ++i) {
+	    int j=0, k=0;
+	    for(; j >= 0 && arr[i] < arr[j]) {
+		arr[j] = arr[i-1];
+		j++;
+	    }
+	}
+
