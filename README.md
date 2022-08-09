@@ -9,17 +9,18 @@ _Different Programming Books and Helpful Materials for Developers_
         05. Computer Organization and Assembly Language
         06. Data Structure and Algorithms (DSA)
         07. Database Systems
-        08. Digital Logic & Computer Design (DLD)
-        09. Discrete Structures
-        10. Fundamentals of Data Mining
-        11. Information Security
-        12. Introduction to Computing Applications
-        13. Operating Systems
-        14. Professional Practices
-        15. Software Engineering
-        16. Theory of Automata
-        17. Web Design and Development
-        18. Computer Science All Subject MCQs.pdf & Its Index.txt
+        08. Design and Analysis of Algorithms
+        09. Digital Logic & Computer Design (DLD)
+        10. Discrete Structures
+        11. Fundamentals of Data Mining
+        12. Information Security
+        13. Introduction to Computing Applications
+        14. Operating Systems
+        15. Professional Practices
+        16. Software Engineering
+        17. Theory of Automata
+        18. Web Design and Development
+        19. Computer Science All Subject MCQs.pdf & Its Index.txt
 
 - ### Batch Programming
         1. Basic Commands
