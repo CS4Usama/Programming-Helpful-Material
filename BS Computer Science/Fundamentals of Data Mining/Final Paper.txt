@@ -1,0 +1,4 @@
+Q#1:  What is the importance of data preprocessing, explain different tasks used for data preprocessing?
+Q#2:  What are the steps of classification model construction, explain decision tree induction with an example.
+      Also, explain the difference in attribute selection measures to get the maximum throughput of a model.
+Q#3:  Explain briefly the classifier evaluation metrics with examples.
